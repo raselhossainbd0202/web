@@ -1,0 +1,320 @@
+/* https://stackoverflow.com/questions/23090136/how-can-i-make-my-flexbox-layout-take-100-vertical-space */
+
+/******************************************************************************/
+/* details */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+}
+
+body p {
+    line-height: 18px;
+}
+
+
+
+#layout-menu {
+    padding-left: 20px;
+    background: #eeeeee;
+
+}
+
+#layout-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+div.menu-category {
+    border: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+div.menu-category:first-child {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+div.menu-item {
+    line-height: 18px;
+}
+
+h1 {
+    margin-bottom: 12px;
+    margin-top: 16px;
+}   
+
+h2 {
+    margin-bottom: 1px;
+    margin-top: 56px;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:hover {
+	border-bottom: 1px gray dotted;
+}
+
+/******************************************************************************/
+/* details for lists */
+
+
+ul, ol, dl {
+	margin-top: 0.2em;
+	padding-top: 0;
+	margin-bottom: 0.8em;
+}
+
+dt {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+
+dl {
+	margin-left: 20px;
+}
+
+
+dd > *:first-child {
+	margin-top: 0;
+}
+
+ul {
+	list-style-position: outside;
+	list-style-type: square;
+}
+
+p + ul, p + ol {
+	margin-top: -0.2em;
+}
+
+li ul, li ol {
+	margin-top: -0.1em;
+}
+
+ol {
+	list-style-position: outside;
+	list-style-type: decimal;
+}
+
+li p, dd p {
+	margin-bottom: 0.3em;
+}
+
+
+ol ol {
+	list-style-type: lower-alpha;
+}
+
+ol ol ol {
+	list-style-type: lower-roman;
+}
+
+li p {
+    margin-top: 0.3em;
+}
+
+h2 + ul, h2 + ol {
+    margin-top: 1em;
+}
+
+/******************************************************************************/
+/* details for blocks */
+
+
+p + div.codeblock {
+	margin-top: -0.6em;
+}
+
+div.codeblock, div.infoblock {
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1.3em;
+}
+
+div.blocktitle {
+	margin-top: 1.2em;
+	margin-bottom: 0.1em;
+}
+
+div.blockcontent {
+	border: 1px solid silver;
+	padding: 1em 0.5em;
+}
+
+div.blockcontent p + ul, div.blockcontent p + ol {
+	margin-top: 0.4em;
+}
+
+div.infoblock p {
+	margin-bottom: 0em;
+}
+
+div.infoblock li p, div.infoblock dd p {
+	margin-bottom: 0.5em;
+}
+
+div.infoblock p + p {
+	margin-top: 0.8em;
+}
+
+div.codeblock > div.blockcontent {
+	background: #f6f6f6;
+}
+
+/******************************************************************************/
+/* fonts */
+
+body {
+    font-family: 'Roboto', Arial, sans;
+    font-size: 12px;
+}
+div.menu-category {
+    font-size: 15px;
+    font-weight: 300;
+}
+div.menu-category:first-child {
+    font-size: 15px; 
+
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+}   
+
+h2 {
+    font-size: 21px;
+    font-weight: 300;
+}
+
+a:link {
+    font-weight: 400;
+}
+
+
+div.blocktitle {
+    font-weight: 400;
+}
+
+
+/******************************************************************************/
+/* colors */
+
+body {
+    color: #484848;
+    background: #ffffff;
+}
+
+#layout-menu {
+    background: #f6f6f6;
+    border-right: 1px solid #dddddd;
+
+}
+
+#layout-content {
+    background: #ffffff;
+}
+
+
+#truefooter {
+    background: #fffff;
+}
+
+dd {
+	color: #222222;
+}
+
+div.infoblock > div.blockcontent {
+	background: #ffffee;
+}
+div.blocktitle {
+	color: #cd7b62;
+}
+
+a:link {
+    color: #527bbd;
+
+}
+
+h1 {
+    color: #527bbd;
+
+}
+
+
+
+/********************************************************************************/
+/* page layout: two columns, no footer */
+
+
+#tlayout {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+}
+
+#bbmenustart {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#layout-menu {
+    flex: 1 2 180px;
+}
+
+#layout-content {
+    flex: 1 1.1 600px;
+    height: 100%;
+}
+
+#truefooter {
+    flex: 3 2 100px;
+    height: 100%;
+}
+
+/********************************************************************************/
+
+/*
+     FILE ARCHIVED ON 05:08:08 Feb 10, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 12:33:26 Oct 02, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.614
+  exclusion.robots: 0.022
+  exclusion.robots.policy: 0.01
+  esindex: 0.012
+  cdx.remote: 131.701
+  LoadShardBlock: 5515.363 (3)
+  PetaboxLoader3.datanode: 273.257 (4)
+  PetaboxLoader3.resolve: 5289.084 (2)
+  load_resource: 169.86
+*/
